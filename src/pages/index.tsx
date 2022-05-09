@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import Head from 'next/head'
+import Menu from '../components/menu'
 
 const Home: React.FC = () => {
   return (
@@ -9,8 +10,7 @@ const Home: React.FC = () => {
         <title>One Page Pro</title>
       </Head>
 
-      <h1>NextJS Structure</h1>
-      <p>Next.js development structure by JVM's employee Gustavo Ferreira.</p>
+      <Menu />
     </div>
   )
 }

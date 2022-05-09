@@ -4,7 +4,7 @@ const theme = {
     primary: '#b1d234',
     header: '#1b1b1b',
     headerText: '#999999',
-    menu: '#161616',
+    menu: '#555555',
     menuItem: '#a0a0a0',
     menuItemSelected: '#ffffff',
     facebook: '#4267B2',
