@@ -10,7 +10,7 @@ export const menuItems = [
 
 export const menuIcons = [
   'cib:facebook-f',
-  'ant-design:google-plus-outlined',
+  'fa:google-plus',
   'akar-icons:linkedin-v2-fill',
   'akar-icons:twitter-fill'
 ]

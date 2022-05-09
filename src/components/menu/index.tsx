@@ -14,24 +14,24 @@ const Menu: React.FC<MenuProps> = () => {
     <Container>
       <div className="menu">
         <img src={logo} alt="Logo Menu" />
-        <div className="menu-list">
-          <ul>
+        <div>
+          <ul className="menu-list">
             {menuItems.map((item, key) => (
               <li className="menu-item" key={key}>
-                <a>{item}</a>
+                <a href={'#' + item}>{item}</a>
               </li>
             ))}
           </ul>
         </div>
         <hr />
-        <div className="social-icons">
-          <ul>
+        <div>
+          <div className="social-icons">
             {menuIcons.map((item, key) => (
-              <li key={key}>
-                <Icon icon={item} />
-              </li>
+              <a key={key} className="social-item">
+                <Icon icon={item} className="social-icon" />
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </Container>

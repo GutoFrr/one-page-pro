@@ -8,6 +8,7 @@ import Document, {
   NextScript
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import icon from '../public/nextjs-icon.ico'
 export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
@@ -42,10 +43,10 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href="../public/nextjs-icon.ico" />
+          <link rel="shortcut icon" href={icon} />
         </Head>
         <body>
           <Main />
