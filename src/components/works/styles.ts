@@ -6,10 +6,11 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 929px;
 
   .works {
     width: 1130px;
-    height: 929px;
+    height: 610px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

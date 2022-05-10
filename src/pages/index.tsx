@@ -6,6 +6,7 @@ import Header from '../components/header'
 import HomePage from '../components/home'
 import Services from '../components/services'
 import Works from '../components/works'
+import About from '../components/about'
 
 const Home: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
       <HomePage />
       <Services />
       <Works />
+      <About />
     </div>
   )
 }

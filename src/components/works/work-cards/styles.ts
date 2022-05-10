@@ -28,6 +28,12 @@ const Container = styled.div`
         text-transform: uppercase;
         letter-spacing: 0;
         margin-bottom: 7px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+
+        :hover {
+          color: ${props => props.theme.colors.primary};
+        }
       }
 
       .role {
@@ -35,6 +41,7 @@ const Container = styled.div`
         font-style: italic;
         color: ${props => props.theme.colors.worksSubTitle};
         margin-bottom: 7px;
+        cursor: pointer;
       }
 
       .text {
