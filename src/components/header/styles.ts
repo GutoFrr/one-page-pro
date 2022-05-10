@@ -5,7 +5,7 @@ const Container = styled.div`
   position: relative;
 
   .header {
-    width: 100vw;
+    width: 100%;
     height: 91.2px;
     display: flex;
     justify-content: flex-end;
@@ -81,8 +81,8 @@ const Container = styled.div`
 
     .plus-icon {
       position: absolute;
-      top: 20px;
-      right: 15px;
+      top: 19px;
+      right: 13px;
       color: ${props => props.theme.colors.text};
     }
 
@@ -102,8 +102,8 @@ const Container = styled.div`
     .minus-icon {
       display: block;
       position: absolute;
-      top: 20px;
-      right: 15px;
+      top: 19px;
+      right: 13px;
       color: ${props => props.theme.colors.text};
     }
 

@@ -14,7 +14,7 @@ const Menu: React.FC<MenuProps> = () => {
     <Container>
       <div className="menu">
         <img src={logo} alt="Logo Menu" />
-        <div>
+        <div className="menu-items">
           <ul className="menu-list">
             {menuItems.map((item, key) => (
               <li className="menu-item" key={key}>
@@ -22,8 +22,8 @@ const Menu: React.FC<MenuProps> = () => {
               </li>
             ))}
           </ul>
+          <hr />
         </div>
-        <hr />
         <div>
           <div className="social-icons">
             {menuIcons.map((item, key) => (

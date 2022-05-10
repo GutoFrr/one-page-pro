@@ -12,14 +12,23 @@ const Container = styled.div`
   .menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    height: 63vh;
+    height: 70vh;
 
     img {
       width: 165px;
       height: 97.5px;
+      cursor: pointer;
     }
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
   }
 
   .menu-list {

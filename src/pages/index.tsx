@@ -3,6 +3,9 @@ import React from 'react'
 import Head from 'next/head'
 import Menu from '../components/menu'
 import Header from '../components/header'
+import HomePage from '../components/home'
+import Services from '../components/services'
+import Works from '../components/works'
 
 const Home: React.FC = () => {
   return (
@@ -13,6 +16,9 @@ const Home: React.FC = () => {
 
       <Menu />
       <Header />
+      <HomePage />
+      <Services />
+      <Works />
     </div>
   )
 }
