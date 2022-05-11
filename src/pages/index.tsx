@@ -7,6 +7,9 @@ import HomePage from '../components/home'
 import Services from '../components/services'
 import Works from '../components/works'
 import About from '../components/about'
+import News from '../components/news'
+import Testimonial from '../components/testimonial'
+import Contact from '../components/contact'
 
 const Home: React.FC = () => {
   return (
@@ -21,6 +24,9 @@ const Home: React.FC = () => {
       <Services />
       <Works />
       <About />
+      <News />
+      <Testimonial />
+      <Contact />
     </div>
   )
 }
