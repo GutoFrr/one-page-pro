@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from './styles'
 import { Icon } from '@iconify/react'
 import WorkCard from './work-cards'
 
 const Works = () => {
+  const [scrollCarousel, setScrollCarousel] = useState<number>(2)
+  const handleScroll = (direction: 'foward' | 'backward') => {
+    if (direction === 'foward') {
+      setScrollCarousel(scrollCarousel > -2 ? scrollCarousel - 1 : 2)
+    } else if (direction === 'backward') {
+      setScrollCarousel(scrollCarousel < 2 ? scrollCarousel + 1 : -2)
+    }
+  }
+
   return (
     <Container>
       <div className="works" id="Our Works">
@@ -21,11 +30,19 @@ const Works = () => {
             </p>
           </div>
           <div className="buttons">
-            <Icon icon="bi:arrow-left-circle" className="arrow" />
-            <Icon icon="bi:arrow-right-circle" className="arrow" />
+            <Icon
+              icon="bi:arrow-left-circle"
+              className="arrow"
+              onClick={() => handleScroll('backward')}
+            />
+            <Icon
+              icon="bi:arrow-right-circle"
+              className="arrow"
+              onClick={() => handleScroll('foward')}
+            />
           </div>
         </div>
-        <WorkCard />
+        <WorkCard position={scrollCarousel} />
       </div>
     </Container>
   )

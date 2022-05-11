@@ -1,13 +1,25 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
+interface ContainerProps {
+  marginLeft: string | number
+}
+
+const Container = styled.div<ContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 40px;
+  width: 1130px;
+  overflow: hidden;
 
   .work-card {
-    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
+    transition: all 0.6s ease;
+
+    &:first-child {
+      margin-left: ${props => props.marginLeft};
+    }
 
     .work-image {
       height: 230px;

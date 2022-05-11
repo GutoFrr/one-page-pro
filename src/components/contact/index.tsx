@@ -5,9 +5,10 @@ import { Icon } from '@iconify/react'
 
 interface ContactProps {
   city?: string
-  cityData?: [
-    { icon?: string; address?: string; email?: string; phone?: string }
-  ]
+  icon?: string[]
+  address?: string
+  email?: string
+  phone?: string
 }
 
 const Contact: React.FC<ContactProps> = () => {
@@ -17,10 +18,10 @@ const Contact: React.FC<ContactProps> = () => {
         <div className="contact-forms">
           <div className="title">
             <h2>
-              Contact <span>.</span>
+              Contact <span className="dot">.</span>
             </h2>
           </div>
-          <div>
+          <div className="forms">
             <form>
               <input type="text" placeholder="Full Name*" />
               <input type="email" placeholder="Email*" />
@@ -33,10 +34,18 @@ const Contact: React.FC<ContactProps> = () => {
           {contactData.map((item, key) => (
             <div className="contact-city" key={key}>
               <h3>{item.city}</h3>
-              <Icon icon={item.icon} />
-              <h4>{item.address}</h4>
-              <h4>{item.email}</h4>
-              <h4>{item.phone}</h4>
+              <div>
+                <Icon icon={item.icon[0]} />
+                <h4>{item.address}</h4>
+              </div>
+              <div>
+                <Icon icon={item.icon[1]} />
+                <h4>{item.email}</h4>
+              </div>
+              <div>
+                <Icon icon={item.icon[2]} />
+                <h4>{item.phone}</h4>
+              </div>
             </div>
           ))}
         </div>

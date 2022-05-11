@@ -7,11 +7,12 @@ interface WorkProps {
   title?: string
   role?: string
   text?: string
+  position: number
 }
 
-const WorkCard: React.FC<WorkProps> = () => {
+const WorkCard: React.FC<WorkProps> = ({ position }) => {
   return (
-    <Container>
+    <Container marginLeft={(position * 780).toString() + 'px'}>
       {workData.map((item, key) => (
         <div className="work-card" key={key}>
           <div className="work-image"></div>
