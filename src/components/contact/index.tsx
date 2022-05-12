@@ -34,16 +34,16 @@ const Contact: React.FC<ContactProps> = () => {
           {contactData.map((item, key) => (
             <div className="contact-city" key={key}>
               <h3>{item.city}</h3>
-              <div>
-                <Icon icon={item.icon[0]} />
+              <div className="info">
+                <Icon icon={item.icon[0]} className="icon" />
                 <h4>{item.address}</h4>
               </div>
-              <div>
-                <Icon icon={item.icon[1]} />
-                <h4>{item.email}</h4>
+              <div className="info">
+                <Icon icon={item.icon[1]} className="icon" />
+                <h4 className="email">{item.email}</h4>
               </div>
-              <div>
-                <Icon icon={item.icon[2]} />
+              <div className="info">
+                <Icon icon={item.icon[2]} className="icon" />
                 <h4>{item.phone}</h4>
               </div>
             </div>

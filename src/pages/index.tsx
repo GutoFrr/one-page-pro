@@ -10,6 +10,7 @@ import About from '../components/about'
 import News from '../components/news'
 import Testimonial from '../components/testimonial'
 import Contact from '../components/contact'
+import Footer from '../components/footer'
 
 const Home: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const Home: React.FC = () => {
       <News />
       <Testimonial />
       <Contact />
+      <Footer />
     </div>
   )
 }

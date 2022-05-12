@@ -62,11 +62,12 @@ const Container = styled.div`
       }
 
       textarea {
+        height: 140px;
         background: transparent;
         border: none;
         border-bottom: 2px solid ${props => props.theme.colors.text};
         padding: 15px 0;
-        margin-bottom: 22px;
+        margin-bottom: 36px;
 
         ::placeholder {
           font: 500 16px 'Open Sans', sans-serif;
@@ -84,6 +85,54 @@ const Container = styled.div`
           font: 500 16px 'Open Sans', sans-serif;
           color: ${props => props.theme.colors.text};
         }
+      }
+
+      button {
+        font: bold 13px 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        background: ${props => props.theme.colors.primary};
+        width: 200px;
+        height: 62px;
+        border: none;
+        color: ${props => props.theme.colors.text};
+        cursor: pointer;
+      }
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-city {
+    padding-bottom: 50px;
+    h3 {
+      font: 800 29px 'Open Sans', sans-serif;
+      color: ${props => props.theme.colors.text};
+      padding-bottom: 30px;
+    }
+
+    .info {
+      display: flex;
+      margin-bottom: 30px;
+      align-items: center;
+      color: ${props => props.theme.colors.text};
+
+      .icon {
+        margin-right: 15px;
+        line-height: 1;
+        font-size: 24px;
+      }
+
+      h4 {
+        font: 400 17px 'Open Sans', sans-serif;
+        line-height: 1.7;
+      }
+
+      .email {
+        color: ${props => props.theme.colors.primary};
+        cursor: pointer;
       }
     }
   }
