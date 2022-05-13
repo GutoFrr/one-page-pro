@@ -17,6 +17,7 @@ const WorkCard: React.FC<WorkProps> = ({ position }) => {
       {workData.map((item, key) => (
         <div className="work-card" key={key}>
           <div className="work-image">
+            <div className="shadow"></div>
             <Icon icon="ant-design:search-outlined" className="search" />
             <img src={item.image} />
           </div>

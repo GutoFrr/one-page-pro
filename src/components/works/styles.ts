@@ -9,6 +9,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 929px;
+  position: relative;
+  z-index: 3;
 
   .works {
     width: 1130px;

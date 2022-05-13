@@ -14,6 +14,8 @@ const Container = styled.div<ContainerProps>`
 
   .search {
     display: none;
+    transition: all 0.5s;
+    z-index: 2;
   }
 
   .work-card {
@@ -30,22 +32,42 @@ const Container = styled.div<ContainerProps>`
       width: 350px;
       display: flex;
       justify-content: center;
+      overflow: hidden;
       align-items: center;
-      transition: all 0.4s;
+      position: relative;
+
+      .shadow {
+        overflow: hidden;
+        position: absolute;
+        height: 230px;
+        width: 350px;
+        opacity: 0;
+        transition: all 0.5s;
+      }
 
       img {
         height: 230px;
         width: 350px;
+        transition: all 0.5s;
       }
 
       :hover {
+        img {
+          height: 250px;
+          width: 370px;
+        }
         .search {
           display: block;
           position: absolute;
-          font-size: 22px;
+          font-size: 30px;
           color: ${props => props.theme.colors.primary};
           cursor: pointer;
-          z-index: 3;
+        }
+
+        .shadow {
+          overflow: visible;
+          opacity: 1;
+          background-color: rgba(0, 0, 0, 0.6);
         }
       }
     }

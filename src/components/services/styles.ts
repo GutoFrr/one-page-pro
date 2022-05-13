@@ -45,6 +45,7 @@ const Container = styled.div`
       font: 400 17px 'Open Sans', sans-serif;
       color: ${props => props.theme.colors.text};
       width: 50%;
+      letter-spacing: 0.8px;
       line-height: 1.7;
     }
   }
