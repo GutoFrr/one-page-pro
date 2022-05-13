@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from './styles'
 import workData from './workData'
+import { Icon } from '@iconify/react'
 
 interface WorkProps {
   image?: string
@@ -15,7 +16,10 @@ const WorkCard: React.FC<WorkProps> = ({ position }) => {
     <Container marginLeft={(position * 390).toString() + 'px'}>
       {workData.map((item, key) => (
         <div className="work-card" key={key}>
-          <div className="work-image"></div>
+          <div className="work-image">
+            <Icon icon="ant-design:search-outlined" className="search" />
+            <img src={item.image} />
+          </div>
           <div className="work-description">
             <div className="work-title">
               <h4 className="title">{item.title}</h4>

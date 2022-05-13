@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import background from '../../public/upload/works-bg.jpg'
 
 const Container = styled.div`
-  background: #a3a3a3;
+  background-image: url(${background});
+  background-position: center;
   padding-left: 330px;
   display: flex;
   align-items: center;
@@ -40,7 +42,7 @@ const Container = styled.div`
     }
 
     .text {
-      width: 483px;
+      width: 51%;
 
       p {
         color: ${props => props.theme.colors.text};

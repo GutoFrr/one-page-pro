@@ -17,8 +17,11 @@ const TestimonialItem: React.FC<TestimonialProps> = ({ position }) => {
         <div className="testimonial-text" key={key}>
           <p>{item.text}</p>
           <div className="testimonial-user">
-            {/* <img src={item.picture} alt="Perfil do autor do depoimento" /> */}
-            <div className="picture"></div>
+            <img
+              src={item.picture}
+              alt="Perfil do autor do depoimento"
+              className="picture"
+            />
             <div className="author">
               <h5>{item.author}</h5>
               <h6>{item.role}</h6>

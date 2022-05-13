@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const Container = styled.div`
   height: auto;
   position: relative;
+  z-index: 5;
 
   .header {
     width: 100%;

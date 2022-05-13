@@ -1,8 +1,10 @@
 import styled from 'styled-components'
+import background from '../../public/upload/testimonial-bg-1.jpg'
 
 const Container = styled.div`
   padding-left: 330px;
-  background: #a3a3a3;
+  background-image: url(${background});
+  background-position: center;
   height: 929px;
   display: flex;
   justify-content: center;

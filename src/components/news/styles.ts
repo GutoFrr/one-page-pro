@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+import background from '../../public/upload/blog-bg.jpg'
 
 const Container = styled.div`
   padding-left: 330px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #a3a3a3;
+  background-image: url(${background});
+  background-position: center;
   height: 929px;
 
   .news {

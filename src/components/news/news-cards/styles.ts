@@ -15,7 +15,7 @@ const Container = styled.div<ContainerProps>`
   .news-card {
     min-width: 350px;
     max-width: 350px;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-out;
 
     &:first-child {
       margin-left: ${props => props.marginLeft};

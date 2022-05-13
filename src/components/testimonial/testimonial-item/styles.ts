@@ -14,7 +14,7 @@ const Container = styled.div<ContainerProps>`
 
   .testimonial-text {
     min-width: 900px;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-out;
 
     &:first-child {
       margin-left: ${props => props.marginLeft};
@@ -38,7 +38,6 @@ const Container = styled.div<ContainerProps>`
       margin-bottom: 55px;
 
       .picture {
-        background: pink;
         width: 55px;
         height: 55px;
         border-radius: 50%;

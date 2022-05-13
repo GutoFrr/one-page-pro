@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from './styles'
+import bottomBg from '../../public/upload/about-bg-2.png'
 
 const About = () => {
   return (
@@ -39,6 +40,7 @@ const About = () => {
           teems with vapour around me.
         </p>
         <a>Visit Website</a>
+        <img src={bottomBg} alt="Imagem inferior About" />
       </div>
     </Container>
   )

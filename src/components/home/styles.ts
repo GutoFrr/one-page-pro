@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import background from '../../public/upload/home-bg-1.jpg'
 
 const Container = styled.div`
   .home {
@@ -6,7 +7,8 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: #a3a3a3;
+    background-image: url(${background});
+    background-position: center;
     height: 929px;
     padding-left: 470px;
     row-gap: 40px;

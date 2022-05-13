@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import background from '../../public/upload/contact-bg.jpg'
 
 const Container = styled.div`
-  background: rgba(10, 10, 10, 0.7);
+  background: url(${background});
+  background-position: center;
+  position: relative;
   display: flex;
   justify-content: center;
   height: 929px;
@@ -9,7 +12,9 @@ const Container = styled.div`
 
   .contact {
     width: 1130px;
+    position: absolute;
     display: flex;
+    z-index: 2;
   }
 
   .contact-forms {

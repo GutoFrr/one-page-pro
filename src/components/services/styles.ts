@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import background from '../../public/upload/service-bg.jpg'
 
 const Container = styled.div`
-  background: #a3a3a3;
+  background-image: url(${background});
+  background-position: center;
   padding-left: 330px;
   display: flex;
   align-items: center;

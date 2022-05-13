@@ -12,10 +12,14 @@ const Container = styled.div<ContainerProps>`
   width: 1130px;
   overflow: hidden;
 
+  .search {
+    display: none;
+  }
+
   .work-card {
     min-width: 350px;
     max-width: 350px;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-out;
 
     &:first-child {
       margin-left: ${props => props.marginLeft};
@@ -23,7 +27,27 @@ const Container = styled.div<ContainerProps>`
 
     .work-image {
       height: 230px;
-      background: ${props => props.theme.colors.primary};
+      width: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.4s;
+
+      img {
+        height: 230px;
+        width: 350px;
+      }
+
+      :hover {
+        .search {
+          display: block;
+          position: absolute;
+          font-size: 22px;
+          color: ${props => props.theme.colors.primary};
+          cursor: pointer;
+          z-index: 3;
+        }
+      }
     }
 
     .work-description {

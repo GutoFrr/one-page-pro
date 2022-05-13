@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 import '@iconify/react'
+import background from '../../public/upload/about-bg.jpg'
 
 const Container = styled.div`
   padding-left: 330px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background: #a3a3a3;
+  background-image: url(${background});
+  background-position: center;
+  z-index: 3;
 
   .about {
     padding: 40px 60px;
@@ -15,6 +18,16 @@ const Container = styled.div`
     width: 700px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
+
+    img {
+      position: absolute;
+      top: 77%;
+      right: 0;
+      opacity: 0.5;
+      z-index: 1;
+    }
 
     .about-title {
       padding: 85px 0 30px;

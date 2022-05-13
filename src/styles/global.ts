@@ -6,6 +6,11 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+    ::selection {
+      color: ${props => props.theme.colors.text};
+      background: ${props => props.theme.colors.primary};
+}
   }
 
   body {

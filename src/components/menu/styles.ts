@@ -8,6 +8,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   position: fixed;
+  z-index: 4;
 
   .menu {
     display: flex;
