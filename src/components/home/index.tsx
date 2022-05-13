@@ -10,7 +10,7 @@ const HomePage = () => {
           <h1>
             One Page <span className="pro">Pro</span>
           </h1>
-          <h3>Provide all-in-one service</h3>
+          <h3>Provide all-in-one service.</h3>
         </div>
         <div className="home-explore">
           <a>

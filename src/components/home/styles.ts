@@ -86,6 +86,56 @@ const Container = styled.div`
       border: 1px solid ${props => props.theme.colors.primary};
     }
   }
+
+  .minus-icon {
+    display: none;
+  }
+
+  .header-button {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    .plus-icon {
+      position: absolute;
+      top: 19px;
+      right: 13px;
+      color: ${props => props.theme.colors.text};
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 80px 80px 0;
+      border-color: transparent ${props => props.theme.colors.primary};
+    }
+  }
+
+  .header-button.active {
+    top: 91.2px;
+    transition: all 0.3s ease;
+
+    .minus-icon {
+      display: block;
+      position: absolute;
+      top: 19px;
+      right: 13px;
+      color: ${props => props.theme.colors.text};
+    }
+
+    .plus-icon {
+      display: none;
+    }
+  }
 `
 
 export default Container

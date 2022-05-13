@@ -11,10 +11,11 @@ import News from '../components/news'
 import Testimonial from '../components/testimonial'
 import Contact from '../components/contact'
 import Footer from '../components/footer'
+import Container from '../styles/pages/Home'
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <Container>
       <Head>
         <title>One Page Pro</title>
       </Head>
@@ -29,7 +30,7 @@ const Home: React.FC = () => {
       <Testimonial />
       <Contact />
       <Footer />
-    </div>
+    </Container>
   )
 }
 

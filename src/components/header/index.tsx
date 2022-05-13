@@ -13,7 +13,9 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = () => {
   const [showHeader, setShowHeader] = useState(false)
-  const handleShowHeader = () => setShowHeader(!showHeader)
+  const handleShowHeader = () => {
+    setShowHeader(!showHeader)
+  }
 
   return (
     <Container>
