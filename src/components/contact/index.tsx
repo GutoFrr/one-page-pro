@@ -13,8 +13,8 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = () => {
   return (
-    <Container>
-      <div className="contact" id="Contact">
+    <Container id="Contact">
+      <div className="contact">
         <div className="contact-forms">
           <div className="title">
             <h2>

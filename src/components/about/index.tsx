@@ -3,8 +3,8 @@ import Container from './styles'
 
 const About = () => {
   return (
-    <Container>
-      <div className="about" id="About Us">
+    <Container id="About Us">
+      <div className="about">
         <div className="about-title">
           <h2>\ Our Stories .</h2>
         </div>

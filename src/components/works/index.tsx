@@ -14,8 +14,8 @@ const Works = () => {
   }
 
   return (
-    <Container>
-      <div className="works" id="Our Works">
+    <Container id="Our Works">
+      <div className="works">
         <div className="works-title">
           <div className="title">
             <h2>

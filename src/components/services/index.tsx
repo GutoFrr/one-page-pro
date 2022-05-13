@@ -4,8 +4,8 @@ import Container from './styles'
 
 const Services = () => {
   return (
-    <Container>
-      <div className="services" id="Services">
+    <Container id="Services">
+      <div className="services">
         <div className="services-title">
           <div className="our-services">
             <h2>

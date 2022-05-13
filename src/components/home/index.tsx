@@ -4,8 +4,8 @@ import { Icon } from '@iconify/react'
 
 const HomePage = () => {
   return (
-    <Container>
-      <div className="home" id="Home">
+    <Container id="Home">
+      <div className="home">
         <div className="home-title">
           <h1>
             One Page <span className="pro">Pro</span>

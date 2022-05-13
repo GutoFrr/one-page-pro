@@ -14,8 +14,8 @@ const Testimonial = () => {
   }
 
   return (
-    <Container>
-      <div className="testimonial" id="Testimonial">
+    <Container id="Testimonial">
+      <div className="testimonial">
         <div className="testimonial-title">
           <h2>
             \ Testimonial <span>.</span>
