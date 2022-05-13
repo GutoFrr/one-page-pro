@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from './styles'
 import { Icon } from '@iconify/react'
 import NewsCard from './news-cards'
 
 const News = () => {
+  const [scrollCarousel, setScrollCarousel] = useState<number>(0)
+  const handleScroll = (direction: 'foward' | 'backward') => {
+    if (direction === 'foward') {
+      setScrollCarousel(scrollCarousel > -5 ? scrollCarousel - 1 : 0)
+    } else if (direction === 'backward') {
+      setScrollCarousel(scrollCarousel < 0 ? scrollCarousel + 1 : -5)
+    }
+  }
+
   return (
     <Container>
       <div className="news" id="Recent News">
@@ -21,11 +30,19 @@ const News = () => {
             </p>
           </div>
           <div className="buttons">
-            <Icon icon="bi:arrow-left-circle" className="arrow" />
-            <Icon icon="bi:arrow-right-circle" className="arrow" />
+            <Icon
+              icon="bi:arrow-left-circle"
+              className="arrow"
+              onClick={() => handleScroll('backward')}
+            />
+            <Icon
+              icon="bi:arrow-right-circle"
+              className="arrow"
+              onClick={() => handleScroll('foward')}
+            />
           </div>
         </div>
-        <NewsCard />
+        <NewsCard position={scrollCarousel} />
       </div>
     </Container>
   )

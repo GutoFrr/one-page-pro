@@ -8,11 +8,12 @@ interface NewsProps {
   release?: string
   writer?: string
   text?: string
+  position: number
 }
 
-const NewsCard: React.FC<NewsProps> = () => {
+const NewsCard: React.FC<NewsProps> = ({ position }) => {
   return (
-    <Container>
+    <Container marginLeft={(position * 390).toString() + 'px'}>
       {newsData.map((item, key) => (
         <div className="news-card" key={key}>
           <div className="news-title">

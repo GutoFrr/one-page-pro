@@ -6,7 +6,7 @@ interface ContainerProps {
 
 const Container = styled.div<ContainerProps>`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   column-gap: 40px;
   width: 1130px;
@@ -15,7 +15,7 @@ const Container = styled.div<ContainerProps>`
   .work-card {
     min-width: 350px;
     max-width: 350px;
-    transition: all 0.6s ease;
+    transition: all 0.5s ease-in;
 
     &:first-child {
       margin-left: ${props => props.marginLeft};

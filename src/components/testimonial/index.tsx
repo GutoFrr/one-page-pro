@@ -1,16 +1,18 @@
 import { Icon } from '@iconify/react'
-import React from 'react'
+import React, { useState } from 'react'
 import Container from './styles'
-import testimonialData from './testimonialData'
+import TestimonialItem from './testimonial-item'
 
-interface TestimonialProps {
-  text?: string
-  picture?: string
-  author?: string
-  role?: string
-}
+const Testimonial = () => {
+  const [scrollCarousel, setScrollCarousel] = useState<number>(0)
+  const handleScroll = (direction: 'foward' | 'backward') => {
+    if (direction === 'foward') {
+      setScrollCarousel(scrollCarousel > -1 ? scrollCarousel - 1 : 0)
+    } else if (direction === 'backward') {
+      setScrollCarousel(scrollCarousel < 0 ? scrollCarousel + 1 : -1)
+    }
+  }
 
-const Testimonial: React.FC<TestimonialProps> = () => {
   return (
     <Container>
       <div className="testimonial" id="Testimonial">
@@ -19,22 +21,18 @@ const Testimonial: React.FC<TestimonialProps> = () => {
             \ Testimonial <span>.</span>
           </h2>
         </div>
-        {testimonialData.map((item, key) => (
-          <div className="testimonial-text" key={key}>
-            <p>{item.text}</p>
-            <div className="testimonial-user">
-              {/* <img src={item.picture} alt="Perfil do autor do depoimento" /> */}
-              <div className="picture"></div>
-              <div className="author">
-                <h5>{item.author}</h5>
-                <h6>{item.role}</h6>
-              </div>
-            </div>
-          </div>
-        ))}
+        <TestimonialItem position={scrollCarousel} />
         <div className="buttons">
-          <Icon icon="bi:arrow-left-circle" className="arrow" />
-          <Icon icon="bi:arrow-right-circle" className="arrow" />
+          <Icon
+            icon="bi:arrow-left-circle"
+            className="arrow"
+            onClick={() => handleScroll('backward')}
+          />
+          <Icon
+            icon="bi:arrow-right-circle"
+            className="arrow"
+            onClick={() => handleScroll('foward')}
+          />
         </div>
       </div>
     </Container>

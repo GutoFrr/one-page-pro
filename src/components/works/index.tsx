@@ -4,12 +4,12 @@ import { Icon } from '@iconify/react'
 import WorkCard from './work-cards'
 
 const Works = () => {
-  const [scrollCarousel, setScrollCarousel] = useState<number>(2)
+  const [scrollCarousel, setScrollCarousel] = useState<number>(0)
   const handleScroll = (direction: 'foward' | 'backward') => {
     if (direction === 'foward') {
-      setScrollCarousel(scrollCarousel > -2 ? scrollCarousel - 1 : 2)
+      setScrollCarousel(scrollCarousel > -4 ? scrollCarousel - 1 : 0)
     } else if (direction === 'backward') {
-      setScrollCarousel(scrollCarousel < 2 ? scrollCarousel + 1 : -2)
+      setScrollCarousel(scrollCarousel < 0 ? scrollCarousel + 1 : -4)
     }
   }
 

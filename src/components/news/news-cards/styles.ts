@@ -1,70 +1,81 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
+interface ContainerProps {
+  marginLeft: string | number
+}
+
+const Container = styled.div<ContainerProps>`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   column-gap: 40px;
+  width: 1130px;
+  overflow: hidden;
 
   .news-card {
-    width: 33%;
-    max-width: 360px;
-  }
+    min-width: 350px;
+    max-width: 350px;
+    transition: all 0.5s ease-in;
 
-  .news-title {
-    width: 350px;
-    margin-bottom: 20px;
-
-    h3 {
-      font: 800 24px 'Open Sans', sans-serif;
-      text-transform: uppercase;
-      color: ${props => props.theme.colors.text};
-      cursor: pointer;
-      line-height: 1.2;
-      transition: all 0.3s ease-in-out;
-
-      :hover {
-        color: ${props => props.theme.colors.primary};
-      }
+    &:first-child {
+      margin-left: ${props => props.marginLeft};
     }
-  }
 
-  .news-text {
-    .news-info {
-      display: flex;
-      padding-top: 12px;
-      margin-bottom: 22px;
+    .news-title {
+      width: 350px;
+      margin-bottom: 20px;
 
-      .icon {
-        margin-right: 13px;
-        vertical-align: middle;
-        line-height: 1;
-        color: ${props => props.theme.colors.primary};
-      }
-
-      h6 {
-        font: bold 11px 'Open Sans', sans-serif;
-        color: ${props => props.theme.colors.primary};
+      h3 {
+        font: 800 24px 'Open Sans', sans-serif;
         text-transform: uppercase;
-        margin-right: 25px;
+        color: ${props => props.theme.colors.text};
         cursor: pointer;
+        line-height: 1.2;
         transition: all 0.3s ease-in-out;
 
         :hover {
-          color: ${props => props.theme.colors.text};
+          color: ${props => props.theme.colors.primary};
         }
       }
     }
 
-    p {
-      font: 400 16px 'Open Sans', sans-serif;
-      color: ${props => props.theme.colors.newsText};
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
+    .news-text {
+      .news-info {
+        display: flex;
+        padding-top: 12px;
+        margin-bottom: 22px;
 
-    hr {
-      border: 1px solid ${props => props.theme.colors.primary};
+        .icon {
+          margin-right: 13px;
+          vertical-align: middle;
+          line-height: 1;
+          color: ${props => props.theme.colors.primary};
+        }
+
+        h6 {
+          font: bold 11px 'Open Sans', sans-serif;
+          color: ${props => props.theme.colors.primary};
+          text-transform: uppercase;
+          margin-right: 25px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          :hover {
+            color: ${props => props.theme.colors.text};
+          }
+        }
+      }
+
+      p {
+        font: 400 16px 'Open Sans', sans-serif;
+        color: ${props => props.theme.colors.newsText};
+        line-height: 1.7;
+        margin-bottom: 30px;
+      }
+
+      hr {
+        border: 1px solid ${props => props.theme.colors.primary};
+      }
     }
   }
 `

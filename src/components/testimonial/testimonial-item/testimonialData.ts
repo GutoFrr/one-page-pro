@@ -5,14 +5,14 @@ const testimonialData = [
     picture: '',
     author: 'John Smith',
     role: 'CFO of Apple'
+  },
+  {
+    text:
+      'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante. Maecenas faucibus mollis Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
+    picture: '',
+    author: 'James Gordon',
+    role: 'Marker'
   }
-  // {
-  //   text:
-  //     'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante. Maecenas faucibus mollis Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
-  //   picture: '',
-  //   author: 'James Gordon',
-  //   role: 'Marker'
-  // }
 ]
 
 export default testimonialData
