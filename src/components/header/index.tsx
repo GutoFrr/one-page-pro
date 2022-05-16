@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
         </div>
       </div>
-      <div className="navbar">
+      <div className={`navbar ${showHeader ? 'active' : 'inactive'}`}>
         <div className="logo-container">
           <a href="/">
             <img src={mobileLogo} alt="Logo Mobile" className="logo-mobile" />

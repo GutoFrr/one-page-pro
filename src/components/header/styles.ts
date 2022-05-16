@@ -119,8 +119,20 @@ const Container = styled.div`
 
   @media screen and (max-width: 1140px) {
     .header {
-      top: -20px;
+      height: 118px;
+      padding: 32px 30px;
+      top: -118px;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      transition: all 0.3s ease;
+
+      .open-time {
+        margin-right: 0;
+        padding: 0;
+      }
     }
 
     .header.active {
@@ -138,11 +150,12 @@ const Container = styled.div`
       align-items: center;
       width: 100%;
       height: 75px;
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       z-index: 30;
       box-shadow: 0px 1px 50px 1px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
 
       .icon {
         color: ${props => props.theme.colors.text};
@@ -174,6 +187,19 @@ const Container = styled.div`
         align-items: center;
         background: ${props => props.theme.colors.primary};
         cursor: pointer;
+      }
+    }
+
+    .navbar.active {
+      top: 118px;
+
+      .minus-icon {
+        display: flex;
+        color: ${props => props.theme.colors.text};
+      }
+
+      .plus-icon {
+        display: none;
       }
     }
   }

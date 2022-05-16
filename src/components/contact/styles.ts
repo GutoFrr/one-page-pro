@@ -78,6 +78,7 @@ const Container = styled.div`
         border-bottom: 2px solid ${props => props.theme.colors.text};
         padding: 15px 0;
         margin-bottom: 36px;
+        resize: none;
 
         ::placeholder {
           font: 500 16px 'Open Sans', sans-serif;

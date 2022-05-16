@@ -116,22 +116,7 @@ const Container = styled.div<ContainerProps>`
     width: 1006px;
 
     .work-card {
-      width: 30%;
-
-      .work-image {
-        height: 230px;
-        width: auto;
-
-        .shadow {
-          height: 230px;
-          width: 350px;
-        }
-
-        img {
-          height: 230px;
-          width: 350px;
-        }
-      }
+      width: 350px;
     }
   }
 `

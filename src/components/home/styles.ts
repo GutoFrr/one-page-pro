@@ -12,6 +12,7 @@ const Container = styled.div`
     align-items: flex-start;
     background-image: url(${background});
     background-position: center;
+    background-size: 100vw;
     height: 929px;
     padding-left: 470px;
     row-gap: 40px;
@@ -94,7 +95,27 @@ const Container = styled.div`
 
   @media screen and (max-width: 1140px) {
     .home {
-      padding: 0 11vw 0 11vw;
+      padding: 0 0 0 11vw;
+    }
+
+    .home-title {
+      color: ${props => props.theme.colors.text};
+
+      h1 {
+        font: 800 114px 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+
+      h3 {
+        font: 400 43px 'Open Sans', sans-serif;
+        color: ${props => props.theme.colors.primary};
+        margin-bottom: 20px;
+      }
+
+      .pro {
+        color: ${props => props.theme.colors.primary};
+      }
     }
   }
 `
