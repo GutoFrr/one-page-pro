@@ -8,7 +8,6 @@ const Container = styled.div`
 
   .service {
     width: 33%;
-    max-width: 350px;
     height: 350px;
     border-radius: 4px;
     border-bottom: 2px solid transparent;
@@ -17,6 +16,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     padding: 40px;
     text-align: center;
     cursor: pointer;

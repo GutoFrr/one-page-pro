@@ -7,21 +7,26 @@ const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  height: 929px;
-  padding: 160px 0px 160px 330px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
 
   .contact {
-    width: 1130px;
-    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 929px;
+    padding: 160px 0 160px 280px;
     display: flex;
-    z-index: 2;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-forms {
     display: flex;
     flex-direction: column;
     width: 683px;
-    padding-right: 80px;
+    padding-right: 100px;
+    margin-top: -125px;
 
     .title {
       padding-bottom: 25px;
@@ -139,6 +144,12 @@ const Container = styled.div`
         color: ${props => props.theme.colors.primary};
         cursor: pointer;
       }
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    .contact {
+      padding: 0 55px;
     }
   }
 `

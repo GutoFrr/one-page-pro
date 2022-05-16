@@ -27,7 +27,8 @@ const theme = {
     newsText: '#efefef',
     testimonialText: '#f9f9f9',
     testimonialAuthor: '#ffffff',
-    testimonialAuthorRole: '#d3d3d3'
+    testimonialAuthorRole: '#d3d3d3',
+    navbar: '#161616'
   }
 }
 

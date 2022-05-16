@@ -19,8 +19,7 @@ const Container = styled.div<ContainerProps>`
   }
 
   .work-card {
-    min-width: 350px;
-    max-width: 350px;
+    width: 350px;
     transition: all 0.5s ease-out;
 
     &:first-child {
@@ -109,6 +108,29 @@ const Container = styled.div<ContainerProps>`
         line-height: 1.6;
         padding-top: 8px;
         margin-bottom: 7px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    width: 1006px;
+
+    .work-card {
+      width: 30%;
+
+      .work-image {
+        height: 230px;
+        width: auto;
+
+        .shadow {
+          height: 230px;
+          width: 350px;
+        }
+
+        img {
+          height: 230px;
+          width: 350px;
+        }
       }
     }
   }

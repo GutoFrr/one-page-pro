@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
+  position: relative;
+  z-index: 2;
   .footer {
     width: 100%;
     height: 103px;
@@ -16,6 +18,12 @@ const Container = styled.div`
       padding-left: 20px;
       padding-right: 20px;
       line-height: 1.7;
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    .footer {
+      padding: 0 55px;
     }
   }
 `

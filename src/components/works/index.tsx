@@ -17,17 +17,20 @@ const Works = () => {
     <Container id="Our Works">
       <div className="works">
         <div className="works-title">
-          <div className="title">
-            <h2>
-              \ Works <span className="dot">.</span>
-            </h2>
-          </div>
-          <div className="text">
-            <p>
-              A wonderful serenity has taken possession of my entire soul, like
-              these sweet mornings of spring which I enjoy with my whole heart.
-              I am alone, and feel the charm of existence in this spot, which.
-            </p>
+          <div className="work-text">
+            <div className="title">
+              <h2>
+                \ Works <span className="dot">.</span>
+              </h2>
+            </div>
+            <div className="text">
+              <p>
+                A wonderful serenity has taken possession of my entire soul,
+                like these sweet mornings of spring which I enjoy with my whole
+                heart. I am alone, and feel the charm of existence in this spot,
+                which.
+              </p>
+            </div>
           </div>
           <div className="buttons">
             <Icon

@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import background from '../../public/upload/home-bg-1.jpg'
 
 const Container = styled.div`
+  position: relative;
+  z-index: 3;
+
   .home {
     display: flex;
     flex-direction: column;
@@ -81,7 +84,7 @@ const Container = styled.div`
       font-size: 17px;
       vertical-align: middle;
       margin-left: 10px;
-      transition: all 0.3s ease;
+      transition: all 0.3s;
     }
 
     hr {
@@ -89,53 +92,9 @@ const Container = styled.div`
     }
   }
 
-  .minus-icon {
-    display: none;
-  }
-
-  .header-button {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-
-    .plus-icon {
-      position: absolute;
-      top: 19px;
-      right: 13px;
-      color: ${props => props.theme.colors.text};
-    }
-
-    .triangle {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 80px 80px 0;
-      border-color: transparent ${props => props.theme.colors.primary};
-    }
-  }
-
-  .header-button.active {
-    top: 91.2px;
-    transition: all 0.3s ease;
-
-    .minus-icon {
-      display: block;
-      position: absolute;
-      top: 19px;
-      right: 13px;
-      color: ${props => props.theme.colors.text};
-    }
-
-    .plus-icon {
-      display: none;
+  @media screen and (max-width: 1140px) {
+    .home {
+      padding: 0 11vw 0 11vw;
     }
   }
 `

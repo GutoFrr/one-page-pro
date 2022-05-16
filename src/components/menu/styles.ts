@@ -103,6 +103,12 @@ const Container = styled.div`
       cursor: pointer;
     }
   }
+
+  @media screen and (max-width: 1140px) {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+  }
 `
 
 export default Container

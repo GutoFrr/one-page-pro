@@ -68,6 +68,7 @@ const Container = styled.div`
   }
 
   .header-button {
+    display: flex;
     width: 80px;
     height: 80px;
     position: absolute;
@@ -75,7 +76,6 @@ const Container = styled.div`
     top: 0;
     cursor: pointer;
     z-index: 3;
-    display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
@@ -110,6 +110,71 @@ const Container = styled.div`
 
     .plus-icon {
       display: none;
+    }
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 1140px) {
+    .header {
+      top: -20px;
+      z-index: 1;
+    }
+
+    .header.active {
+      top: 0px;
+    }
+
+    .header-button {
+      display: none;
+    }
+
+    .navbar {
+      background: ${props => props.theme.colors.navbar};
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 75px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 30;
+      box-shadow: 0px 1px 50px 1px rgba(0, 0, 0, 0.1);
+
+      .icon {
+        color: ${props => props.theme.colors.text};
+      }
+
+      .logo-container {
+        padding-left: 50px;
+        margin-right: auto;
+      }
+
+      .menu-container {
+        width: 80px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .menu-icon {
+          font-size: 35px;
+          cursor: pointer;
+        }
+      }
+
+      .menu-button {
+        width: 80px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: ${props => props.theme.colors.primary};
+        cursor: pointer;
+      }
     }
   }
 `

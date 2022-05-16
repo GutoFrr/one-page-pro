@@ -9,6 +9,7 @@ const Container = styled.div`
   align-items: flex-start;
   background-image: url(${background});
   background-position: center;
+  position: relative;
   z-index: 3;
 
   .about {
@@ -80,6 +81,10 @@ const Container = styled.div`
       line-height: 1.7;
       margin-bottom: 20px;
     }
+  }
+
+  @media screen and (max-width: 1140px) {
+    padding: 0 55px;
   }
 `
 

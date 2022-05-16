@@ -29,6 +29,11 @@ const Container = styled.div`
     align-items: flex-start;
     margin-bottom: 80px;
 
+    .work-text {
+      display: flex;
+      flex-direction: row;
+    }
+
     .title {
       width: 370px;
 
@@ -61,6 +66,57 @@ const Container = styled.div`
         font-size: 47px;
         color: ${props => props.theme.colors.primary};
         cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    padding: 0 55px;
+
+    .works {
+      width: 1006px;
+    }
+
+    .works-title {
+      width: 1006px;
+
+      .work-text {
+        display: flex;
+        flex-direction: column;
+      }
+      .title {
+        width: auto;
+
+        h2 {
+          color: ${props => props.theme.colors.text};
+          font: 800 60px 'Open Sans', sans-serif;
+          text-transform: uppercase;
+        }
+
+        .dot {
+          color: ${props => props.theme.colors.primary};
+        }
+      }
+
+      .text {
+        width: 90%;
+
+        p {
+          color: ${props => props.theme.colors.text};
+          font: 400 17px 'Open Sans', sans-serif;
+          letter-spacing: 0.8px;
+          line-height: 1.7;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        column-gap: 4px;
+        .arrow {
+          font-size: 47px;
+          color: ${props => props.theme.colors.primary};
+          cursor: pointer;
+        }
       }
     }
   }

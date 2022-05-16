@@ -9,6 +9,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 
   .testimonial {
     display: flex;
@@ -40,6 +42,10 @@ const Container = styled.div`
       color: ${props => props.theme.colors.primary};
       cursor: pointer;
     }
+  }
+
+  @media screen and (max-width: 1140px) {
+    padding: 0 55px;
   }
 `
 

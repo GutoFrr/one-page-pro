@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Container from './styles'
 import headerData from './headerData'
 import { Icon } from '@iconify/react'
+import mobileLogo from '../../public/upload/logo-mobile.png'
 
 interface HeaderProps {
   open?: string
@@ -36,6 +37,20 @@ const Header: React.FC<HeaderProps> = () => {
             <Icon icon={headerData.icon[2]} className="header-icon" />
             <h4>{headerData.email}</h4>
           </div>
+        </div>
+      </div>
+      <div className="navbar">
+        <div className="logo-container">
+          <a href="/">
+            <img src={mobileLogo} alt="Logo Mobile" className="logo-mobile" />
+          </a>
+        </div>
+        <div className="menu-container">
+          <Icon icon="ant-design:menu-outlined" className="menu-icon icon" />
+        </div>
+        <div className="menu-button" onClick={handleShowHeader}>
+          <Icon icon="akar-icons:plus" className="plus-icon icon" />
+          <Icon icon="akar-icons:minus" className="minus-icon icon" />
         </div>
       </div>
       <div
